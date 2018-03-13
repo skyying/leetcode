@@ -1,4 +1,6 @@
+
 var lengthOfLongestSubstring = function (s) {
+
     if (s.length <= 1) return s.length; //base case
 
     var substring = s[0],
