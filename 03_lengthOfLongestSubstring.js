@@ -1,4 +1,5 @@
 
+
 var lengthOfLongestSubstring = function (s) {
 
     if (s.length <= 1) return s.length; //base case
@@ -20,3 +21,5 @@ var lengthOfLongestSubstring = function (s) {
     }
     return maxLength;
 };
+
+
