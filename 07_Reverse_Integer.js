@@ -13,8 +13,10 @@ var reverse = function (x) {
     }
 
     ans = (isNegtive ? "-" : "") + ans;
-    return +ans > Math.pow(2, 32) || +ans < -Math.pow(2, 32)  ? +ans :  0;
+
+    return +ans > -Math.pow(2, 32) && +ans < Math.pow(2, 32)  ? +ans :  0;
 };
 
 console.log(reverse(-123))
 console.log(reverse(1230))
+console.log(reverse(1563847412))
