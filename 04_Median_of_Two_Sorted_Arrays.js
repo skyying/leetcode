@@ -20,7 +20,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
     
 };
 
-//todo better to use a merge sort apporach. 
+//todo: better to use a merge sort apporach, will be more efficient.  
 
 console.log(findMedianSortedArrays([1, 3], [2, 4])===2.5)
 console.log(findMedianSortedArrays([2], [])===2)
