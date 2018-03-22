@@ -51,7 +51,7 @@ var threeSum = function (nums) {
 
 var testingArray = Array.from({
     length: 10000
-}).fill(0)
+}).fill(0);
 testingArray = testingArray.map((x) => Math.floor(Math.random() * 100));
 testingArray = testingArray.map((x, i) => x = i % 2 === 0 ? x : x * -1);
 
