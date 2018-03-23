@@ -4,11 +4,8 @@
  * @return {number}
  */
 var strStr = function(haystack, needle) {
-   if(needle.length===0) return -1;
-   if(needle.length===1){
-       return haystack.indexof(needle);
-   }else{
-       return haystack.search(needle)
-   }
-    
+   return haystack.search(needle);
 };
+
+console.log(strStr("", "")===0);
+console.log(strStr("abaaa", "ba")===1);
