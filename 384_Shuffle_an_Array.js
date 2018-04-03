@@ -24,15 +24,14 @@ Solution.prototype.shuffle = function() {
     var i= shuffledArray.length, randomIndex, tmp;
 
     // using Fisher–Yates shuffle algorithm;
-
     //loop through i in descending order, start from array.length - 1; 
     while(--i>0){
         
-
-        randomIndex = Math.floor(Math.random() * (i + 1) );
         // get a random index between i and 0;
+        randomIndex = Math.floor(Math.random() * (i + 1) );
+        
 
-        //swap a[random index] and a[i](right element)
+        //swap shuffledArray[random index] and shuffledArray[i](right element)
         tmp = shuffledArray[randomIndex];
         shuffledArray[randomIndex] = shuffledArray[i];
         shuffledArray[i] = tmp;
