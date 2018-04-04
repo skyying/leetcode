@@ -6,38 +6,21 @@
  * }
  */
 /**
+ * Given a sorted linked list, delete all duplicates such that each element appear only once
+ * 
  * @param {ListNode} head
  * @return {ListNode}
  */
 var deleteDuplicates = function(head) {
    
-    // 如果下一個node.val same as current
-    // 跑while loop, 重新指定node.next;
-        var currentVal, headCopy;
-        headCopy = head;
-        while(head.next){
-            currentVal = head.val;
-            var next = head.next;
-            if(currentVal == next.val ){
-                head.next = head.next.next;
-            }else{
-                head = next;
-            } 
-        }
-        return headCopy;
+      // base case, return head if no head.next or head doesn't exist;    
+      if(!head || !head.next) return head;
+
+      // define head.next; head.next will be a result after excuted deleteDuplicates
+      // for example, a link list 1->1->2;
+      // if first and second are different, then they should return first + result of deleteDuplicates(second)
+      // else, they should just be result of deleteDuplicates(second), since first and second are the same. 
+      head.next = deleteDuplicates(head.next);
+      return head.val === head.next.val ? head.next : head;
+       
 };
-
-// function ListNode(val) {
-//     this.val = val;
-//     this.next = null;
-// }
-// var head = new ListNode(0);
-// var current = head;
-// for(var i=0; i<5; i++)
-// {   
-//     head.next = new ListNode(1);
-//     head = head.next;
-   
-// }
-
-// console.log(deleteDuplicates(current));
