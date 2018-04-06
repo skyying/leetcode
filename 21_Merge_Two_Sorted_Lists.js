@@ -6,6 +6,9 @@
  * }
  */
 /**
+ * 題目: 給兩個排序過的linked list, 依大小merge這兩個list
+ * l1: 1->2->3, l2: 2->2->4  => return 1->2->2->2->3->4
+ * Idea: 創造一個新的list K, 比較l1和l2的頭, 看誰小就先放到K裏面, 需要處理l1, l2其中一個是空值的問題
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @return {ListNode}
@@ -15,20 +18,25 @@ var mergeTwoLists = function(l1, l2) {
     
     var newList = new ListNode(null);
     var head = newList;
-    if(!l1 || !l2) {
-        return l1 || l2;
-    }
 
-    while(l1 || l2){
-        if( (l1 && l2 &&  l1.val < l2.val) || !l2 ){
-            newList.next = new ListNode(l1.val);
+    while(l1 && l2){
+
+        if( l1.val < l2.val ){
+            newList.next = l1;
             l1 = l1.next;
-        }else if( (l1 && l2 && l1.val >= l2.val) || !l1){
-            newList.next = new ListNode(l2.val);
+        }else{
+            newList.next = l2;
             l2 = l2.next;
         }
         newList = newList.next;
     }
+
+    if(!l1){
+        newList.next = l2;
+    }else{
+        newList.next = l1;
+    }
+
     return head.next;
     
 };
