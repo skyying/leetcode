@@ -14,57 +14,29 @@
  * @return {ListNode}
  */
 
- //solution 1, 
+
 var reverseList = function(head) {
 
-    if(!head) return head;
-
-    var store = [], i=0, current = head, newNode;
-     
+    var current = head;
+    var reversed = null; //because start from first node, its next is null;
+    
     while(current){
-        store[i] = current.val;
-        current = current.next;
-        i++;
-    }
-
-    newNode = new ListNode(store[store.length-1]); //inital a new List
     
-    head = newNode; //reset head
-    current = head;
-    
-    for(var j = store.length - 2 ; j >= 0; j--){
-        newNode = new ListNode(store[j]);
-        current.next = newNode;
-        current = current.next; 
-    }
-    return head;
-
-};
-
-
-//solution 2;
-var reverseList = function(head) {
-
-    if(head == null || head.next == null) {
-            return head;
-        }
-        var prev = null, curr = head;
+        var next = current.next;
+        // next node for next iteration;
         
-        while(curr) {
-
-            var nxt = curr.next;
-            // 先把下一個存起來, 下一次要從這裏開始
-            curr.next = prev;
-
-            // 前面就是自己, 把自己存下來 
-            prev = curr;
-
-            // 設定下一run要從哪裏開始
-            curr = nxt;
-
-        }
-        return prev;
-
+        current.next = reversed;
+        // link current node to reversed list;
+        
+        reversed = current;
+        // let reversed list's head current;
+        
+        current = next;
+        // make current node to its original next node
+    
+    }
+    
+    return reversed;
 };
 
 
@@ -118,6 +90,6 @@ function Test_reverseList(testArray, expectedArray){
     this.isEqual = this.valdate();
 }
 
-var test01 = new Test_reverseList([ 1, 2], [2, 1]);
+var test01 = new Test_reverseList([ 1, 3, 2], [2, 3, 1]);
 
 console.log(test01.isEqual);
