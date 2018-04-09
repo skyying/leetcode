@@ -30,26 +30,27 @@ var reverseBetween = function(head, m, n) {
     while(current){
 
         var nxt = current.next;
-        // store value to next iteration node;
+        // store next node for next iteration
         if(count === m-1){
             start = current;  
-            // set start to previous node before reverse; 
+            // set start to previous node before reverse;
+
         }else if (count >= m && count <= n ) {
             current.next = reverse;
             reverse = current;
             // if count is between m and n, make reverse list;
-
             if(count === m && !end ){
                 end = reverse;
             } // init end and link end list to reverse list;
+
         }else if(count > n){
             end.next = current;
             end = end.next;
-        } // if count is greater than n, add current to end;
+        } // if count is greater than n, link current to end;
 
         current = nxt;
         count++;
-         // reset next iteration
+        // reset next iteration
     }
 
     if(start) {
