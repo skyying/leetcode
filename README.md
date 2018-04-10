@@ -19,6 +19,7 @@ I am using javascript/python, but mainly javascript.
 * O(1)/O(n) pop or push a node
 * O(n) Remove a node
 * O(n) Detect a cycle
+* O(n)[Find intersect of two lists](https://bebest.gitbook.io/leetcode/160.-intersect-of-two-linked-list)
 * O(n) Count its length
 * O(nlogn)Sort linked list
 * O(n) Search a element in a linked list 
@@ -28,8 +29,7 @@ I am using javascript/python, but mainly javascript.
 * [86 Partition List.js](https://github.com/skyying/leetcode/blob/master/86_Partition_List.js)
 * [83 Remove Duplicates from Sorted List](https://github.com/skyying/leetcode/blob/master/83_Remove_Duplicates_from_Sorted_List.js)
 * [328 Odd Even Linked List](https://github.com/skyying/leetcode/blob/master/328_Odd_Even_Linked_List.js)
-
-
+* [160. Intersect of two linked list](https://github.com/skyying/leetcode/blob/master/linked%20list/160_Intersection_of_Two_Linked_Lists.js)
 
 
 
