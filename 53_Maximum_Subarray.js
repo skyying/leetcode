@@ -26,9 +26,9 @@ var maxSubArray = function (nums) {
     for (var i = 1; i < nums.length; i++) {
 
         sum = Math.max(sum + nums[i], nums[i]);
-        //if Sum >= 0, sum += nums[i], else sum = nums[i];
-        //Math.max的寫法還比較了如果都是負數時的情況。
-         
+
+        //if Sum >= 0, sum+= nums[i], else sum = nums[i]
+        
         max = Math.max(sum, max);
 
     }
