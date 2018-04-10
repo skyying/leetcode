@@ -29,8 +29,8 @@ I am using javascript/python, but mainly javascript.
 * [86 Partition List.js](https://github.com/skyying/leetcode/blob/master/86_Partition_List.js)
 * [83 Remove Duplicates from Sorted List](https://github.com/skyying/leetcode/blob/master/83_Remove_Duplicates_from_Sorted_List.js)
 * [328 Odd Even Linked List](https://github.com/skyying/leetcode/blob/master/328_Odd_Even_Linked_List.js)
-* [160. Intersect of two linked list](https://github.com/skyying/leetcode/blob/master/linked%20list/160_Intersection_of_Two_Linked_Lists.js)
-* 24 Swap Nodes in Pairs [Notes](https://bebest.gitbook.io/leetcode/24.-swap-nodes-in-pairs)[Code](https://github.com/skyying/leetcode/blob/master/linked%20list/24_Swap_Nodes_in_Pairs.js)
+* 160. Intersect of two linked list [Notes](https://bebest.gitbook.io/leetcode/160.-intersect-of-two-linked-list), [Code](https://github.com/skyying/leetcode/blob/master/linked%20list/160_Intersection_of_Two_Linked_Lists.js)
+* 24 Swap Nodes in Pairs [Notes](https://bebest.gitbook.io/leetcode/24.-swap-nodes-in-pairs), [Code](https://github.com/skyying/leetcode/blob/master/linked%20list/24_Swap_Nodes_in_Pairs.js)
 
 
 
