@@ -26,7 +26,6 @@ var isPalindrome = function(head) {
         current = current.next;
 
     }
-
     while(current){
         if(current.val !== head.val){
             return false;
