@@ -7,10 +7,16 @@ var removeElement = function(nums, val) {
         if(nums[i]===val){
             nums.splice(i, 1);
             i--;
+            // when remove an element from array, need to udpate index of next element you want to check
         }
     }
     return nums.length;
 };
+
+
+
+
+
 
 
 
