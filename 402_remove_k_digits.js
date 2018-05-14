@@ -2,6 +2,7 @@
  * @param {string} num
  * @param {number} k
  * @return {string}
+ * idea : https://bebest.gitbook.io/leetcode/402.-remove-k-digits
  */
 var removeKdigits = function(num, k) {
     
