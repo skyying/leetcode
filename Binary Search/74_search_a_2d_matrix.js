@@ -4,7 +4,7 @@
  ** @param {number} target
  ** @return {boolean}
  **/
-//solution 1
+//solution 1, find target belong to which row, and  find target in that row
 var searchMatrix = function(matrix, target) {
     let row_low = 0, row_high = matrix.length - 1; 
     while(row_high >= row_low){
