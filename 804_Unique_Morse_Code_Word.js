@@ -44,13 +44,13 @@ var uniqueMorseRepresentations = function(words) {
     return pattern.size;
 };
 
+// there is a better way, store the query table by dictionary 
+// it won't take liner time to query the morse string
 
 
+let words  = ["gin", "zen", "gig", "msg"];
 
-let a  = ["gin", "zen", "gig", "msg"];
-
-
-console.log(uniqueMorseRepresentations(a));
+console.log(uniqueMorseRepresentations(words));
 
 
 
