@@ -59,7 +59,7 @@ var maxdepth = function(root) {
 
 //概念一樣是遞迴，只是用Math.max的函數來做比較
 var maxdepth = function(root) {
-    if (!root) { return 0; }
+   if (!root) { return 0; }
     return Math.max(maxdepth(root.right) + 1, maxdepth(root.left) + 1);
 };
 
