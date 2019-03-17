@@ -29,6 +29,6 @@ var pathSum = function(root, sum) {
     }
   };
 
-  tree(root, sum);
+  tree(root);
   return count;
 };
