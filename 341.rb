@@ -25,7 +25,7 @@
 class NestedIterator
   # @param {NestedInteger[]} nested_list
   def initialize(nested_list)
-    @stack = to_stack(nested_list)
+    @stack = nested_list.reverse
   end
 
   # @return {Boolean}
@@ -34,7 +34,7 @@ class NestedIterator
       top = @stack.last
       return true if top.is_integer
       @stack.pop 
-      to_stack(top.get_list)
+      @stack += top.get_list.reverse
     end
     false
   end
@@ -42,13 +42,6 @@ class NestedIterator
   # @return {Integer}
   def next
     @stack.pop.get_integer
-  end
-
-  private 
-
-  def to_stack(list)
-      @stack ||= []
-      @stack += list.reverse
   end
 end
 
